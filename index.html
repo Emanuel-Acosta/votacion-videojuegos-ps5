@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votación de Videojuegos PS5</title>
+    <meta name="description" content="Sistema de votación para los mejores videojuegos de PlayStation 5">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">🎮 Votación de Videojuegos PS5</h1>
+            <p class="header__subtitle">Vota por tus juegos favoritos de PlayStation 5</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <section class="voting-section">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Cargando juegos...</p>
+                </div>
+                
+                <div class="error-message" id="error-message" style="display: none;">
+                    <p id="error-text"></p>
+                    <button id="retry-btn" class="btn btn--secondary">Reintentar</button>
+                </div>
+                
+                <div class="games-grid" id="games-grid">
+                    <!-- Los juegos se cargarán aquí dinámicamente -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal para ampliar carátulas -->
+    <div class="modal" id="imageModal">
+        <div class="modal__overlay" id="modalOverlay">
+            <div class="modal__content">
+                <button class="modal__close" id="closeModal">&times;</button>
+                <img class="modal__image" id="modalImage" src="" alt="">
+                <div class="modal__info">
+                    <h3 class="modal__title" id="modalTitle"></h3>
+                    <p class="modal__description" id="modalDescription"></p>
+                    <div class="modal__details">
+                        <span class="modal__developer" id="modalDeveloper"></span>
+                        <span class="modal__genre" id="modalGenre"></span>
+                        <span class="modal__date" id="modalDate"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sistema de Votación PS5 - Taller de Aplicaciones para Internet</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
